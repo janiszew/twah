@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 def format_yn(answer):
-  mapping = {"yes": "Yes, please spam me", "no": "No, please keep my response confidential"}
+  mapping = {"yes": "Yes, please email me some information on these topics", "no": "No, please keep my response limited to our in person discussion"}
   return mapping.get(answer)
 
 st.title("Transition with a heart")
@@ -28,6 +28,7 @@ with st.form("email"):
                             "Tricuspid Atresia",
                             "Tetralogy of Fallot (ToF)",
                             "Ebstein Anomaly",
+                            "It's Not Here (INH)",
                             "I Don't Know (IDK)"])
 
   verbose = st.radio("Would you like detailed information in your confirmation email?",
